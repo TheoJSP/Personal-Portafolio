@@ -12,4 +12,13 @@ $(document).ready(()=>{
         $(".navbar .menu").toggleClass("active");
         $(".menu-btn i").toggleClass("active");
     })
+
+    //TYPING ANIMATION
+    var typed = new Typed(".typing", {
+        strings: ["Developer", "Student"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+
 })

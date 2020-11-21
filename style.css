@@ -263,7 +263,7 @@ section .title {
     text-align: justify;
 }
 
-.about .about-content .right a{
+.about .about-content .right .boton {
     display: inline-block;
     background: #00c6b1   ;
     color: #fff;
@@ -275,8 +275,11 @@ section .title {
     border:2px solid #00c6b1   ;
     transition: all 0.3 ease;
 }
+.about .about-content .right  .huergo{
+    color:#00c6b1  ;
+} 
 
-.about .about-content .right a:hover{
+.about .about-content .right .boton:hover{
     color:#00c6b1   ;
     background: none;
 }

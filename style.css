@@ -340,7 +340,7 @@ section .title {
 /*SKILLS*/
 
 .skills .title::After{
-    content: "What i know";
+    content: "And skills";
 }
 
 .skills .skills-content .column{
@@ -372,6 +372,31 @@ section .title {
 .skills .skills-content .left a:hover{
     color:#00c6b1   ;
     background: none;
+}
+
+.skills .skills-content .left p{
+    text-align: justify;
+}
+.skills .skills-content .left .icons{
+    margin: 10px 0;
+}
+.skills .skills-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.skills .skills-content .row .info{
+    margin-left: 30px;
+}
+.skills .skills-content .row i{
+    font-size: 25px;
+    color: #00c6b1   ;
+}
+.skills .skills-content .info .head{
+    font-weight: 500;
+}
+.skills .skills-content .info .sub-title{
+    color: #333;
 }
 
 .skills .skills-content .right .bars{

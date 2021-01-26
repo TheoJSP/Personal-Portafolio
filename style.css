@@ -9,6 +9,7 @@
 }
 html{
     scroll-behavior: smooth;
+    
 }
 .max-width{
     max-width: 1300px;
@@ -153,10 +154,10 @@ html{
 section{
     padding:100px 0 ;
 }
-.about, .services, .skills,.resume, .contact, footer{
+.about, .services, .skills,.resume, .work, footer{
     font-family:"Poppins", sans-serif;
 }
-.about .about-content,.services .serv-content,.skills .skills-content, .contact .contact-content, .resume .resume-content {
+.about .about-content,.services .serv-content,.skills .skills-content, .work .work-content, .resume .resume-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -379,16 +380,16 @@ section .title {
     width: 90%;
 }
 .skills-content .right .css::before{
-    width: 60%;
+    width: 70%;
 }
 .skills-content .right .js::before{
-    width: 80%;
+    width: 60%;
 }
 .skills-content .right .php::before{
     width: 50%;
 }
 .skills-content .right .mysql::before{
-    width: 70%;
+    width: 50%;
 }
 
 /*RESUME*/
@@ -440,101 +441,56 @@ section .title {
     
 }
 
-/*CONTACT*/
-.contact .title::after{
-    content: "Get in touch";
+/*WORKS*/
+.work{
+    background: #fff;
+    color: #111;
+} 
+.work .title::before{
+    background: #111;
 }
-.contact .contact-content .column{
-    width: calc(50% - 30px);
+.work .title::after{
+    background: #fff;
+    content:"All in Github";
+
 }
-.contact .contact-content .text{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.contact .contact-content .left p{
-    text-align: justify;
-}
-.contact .contact-content .left .icons{
-    margin: 10px 0;
-}
-.contact .contact-content .row{
-    display: flex;
-    height: 65px;
-    align-items: center;
-}
-.contact .contact-content .row .info{
-    margin-left: 30px;
-}
-.contact .contact-content .row i{
-    font-size: 25px;
-    color: #00c6b1   ;
-}
-.contact .contact-content .info .head{
-    font-weight: 500;
-}
-.contact .contact-content .info .sub-title{
-    color: #333;
-}
-.contact .right form .fields{
-    display: flex;
-}
-.contact .right form .field,
-.contact .right form .fields .field{
-    height: 45px;
-    width: 100%;
-    margin-bottom: 15px;
-}
-.contact .right form .textarea{
-    height: 80px;
-    width: 100%;
-}
-.contact .right form .name{
-    margin-right: 10px;
-}
-.contact .right form .email{
-    margin-left: 10px;  
-}
-.contact .right form .field input,
-.contact .right form .textarea textarea{
-    height: 100%;
-    width: 100%;
-    border: 1px solid lightgrey;
+.work .work-content .card{
+    width: calc(50% - 20px);
+    background: #eee;
+    
+    text-align: center;
     border-radius: 6px;
-    outline: none;
-    padding: 0 15px;
-    font-size: 17px;
-    font-family: 'Poppins', sans-serif;
-    transition: all 0.3s ease;
-}
-.contact .right form .field input:focus,
-.contact .right form .textarea textarea:focus{
-    border-color: #b3b3b3;
-}
-.contact .right form .textarea textarea{
-    padding-top: 10px;
-    resize: none;
-}
-.contact .right form .button{
-    height: 47px;
-    width: 170px;
-}
-.contact .right form .button button{
-    width: 100%;
-    height: 100%;
-    border: 2px solid #00c6b1   ;
-    background: #00c6b1   ;
-    color: #fff;
-    outline: none;
-    font-size: 20px;
-    font-weight: 500;
-    border-radius: 6px;
+    padding: 10px 25px;
+    margin: 10px 0px 0px 0px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.contact .right form .button button:hover{
+.work .work-content .card:hover{
+    background: #00c6b1   ;
+}
+.work .work-contentt .card .box{
+    transition: all 1s ease;
+   
+    
+}
+.work .work-content .card:hover .box{
+    transform: scale(1.05);
+
+}
+.work .work-content .card i{
+    font-size: 50px;
     color: #00c6b1   ;
-    background: none;
+    transition: color 0.3s ease;
+}
+.work .work-content .card:hover i{
+    color:#fff;
+    
+}
+.work .work-content .card .text{
+    font-size: 25px ;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+    
 }
 
 /*FOOTER*/
@@ -552,6 +508,13 @@ footer span a{
 footer span a:hover{
     text-decoration: underline;
 }
+
+
+a{
+text-decoration: none;  
+color: #111;;
+}
+
 
 /*RESPONSIVE MEDIA*/
 @media (max-width: 1300px){
@@ -646,6 +609,10 @@ footer span a:hover{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+    .work .work-content .card{
+        width: calc(100%);
+        margin-bottom: 20px;
+    }
     .skills .skills-content .column{
         width: 100%;
         margin-bottom: 35px;
@@ -666,7 +633,7 @@ footer span a:hover{
        
     }
 
-    .services .serv-content .card, .skills .skills-content .column, .resume .resume-content .card, .contact .contact-content .column{
+    .services .serv-content .card, .skills .skills-content .column, .resume .resume-content .card, .work .work-content .column{
         width: 100%;
         
     }
@@ -684,11 +651,5 @@ footer span a:hover{
         font-size: 20px;
         padding: 7px 20px;
     }
-    .contact .right form .fields{
-        flex-direction: column;
-    }
-    .contact .right form .name,
-    .contact .right form .email{
-        margin: 0;
-    }
+  
 }
